@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="suvorov.pokemon.presentation.ui.splash.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="suvorov.pokemon.presentation.ui.list.ListFragment"
+        android:label="PokemonListFragment"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_pagesFragment"
+            app:destination="@id/pagesFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagesFragment"
+        android:name="suvorov.pokemon.presentation.ui.pages.PagesFragment"
+        android:label="PagesFragment"
+        tools:layout="@layout/fragment_pages">
+        <action
+            android:id="@+id/action_pagesFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="suvorov.pokemon.presentation.ui.intro.IntroFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/fragment_intro"/>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="suvorov.pokemon.presentation.ui.stats.StatsFragment"
+        android:label="StatsFragment"
+        tools:layout="@layout/fragment_stats"/>
+    <fragment
+        android:id="@+id/evolutionFragment"
+        android:name="suvorov.pokemon.presentation.ui.evolution.EvolutionFragment"
+        android:label="EvolutionFragment"
+        tools:layout="@layout/fragment_evolution"/>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="suvorov.pokemon.presentation.ui.favorites.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_pagesFragment"
+            app:destination="@id/pagesFragment" />
+    </fragment>
+</navigation>
